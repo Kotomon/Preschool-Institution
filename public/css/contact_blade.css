@@ -1,0 +1,44 @@
+.contact_blade h1{
+    margin: 30px;
+    text-align:center;
+    align:center;
+    color:#CF1A52;
+    font-family:URW Chancery L, cursive;
+    font-size:50px;
+}
+.contact_blade h2{
+    text-align:center;
+    align:center;
+    color:#081E69;
+    font-family:URW Chancery L, cursive;
+    font-size:30px;
+}
+.contact_blade p{
+    text-align:center;
+    align:center;
+    color:#081E69;
+    font-family:URW Chancery L, cursive;
+    font-size:20px;
+}
+iframe{
+    margin-top: 50px;
+    width: 80%;
+    height: 400px;
+    border-width: 10px;
+    border-style: double;
+    border-color: #CF1A52;
+    border-radius: 60px;
+    display: block;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .contact_blade h1{
+        font-size:30px;
+    }
+    .contact_blade h2{
+        font-size:25px;
+    }
+    .contact_blade p{
+        font-size:20px;
+    }
+}

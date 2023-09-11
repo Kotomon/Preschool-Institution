@@ -1,0 +1,260 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    background-attachment: fixed;
+    background-size: 100%;
+    width: 100%;
+    background-image: url("../images/mainBG.jpg");
+}
+
+.sticky {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0.85;
+    z-index: 1;
+}
+
+.log .button {
+    display: inline-block;
+    background-color: #e3f5f9B3;
+    color: #060d8a;
+    border-radius: 4px;
+    padding: 5px 15px;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.log .button:hover {
+    background-color: #2171b5B3;
+}
+.navigation a:nth-child(1) {
+    margin-right: auto;
+}
+
+.navigation a:nth-last-child(1) {
+    margin-left: auto;
+}
+.navigation {
+    background-image: url("../images/navigation3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* заменили space-between на center */
+    flex-grow: 1;
+    padding: 0 20px; /* добавили отступы для контейнера навигации. */
+    z-index: 1;
+}
+
+.navigation img {
+    max-width: 250px;
+    height: auto;
+    margin: 15px 10px 0 10px;
+    vertical-align: middle;
+    z-index: 1;
+}
+
+.navigation a {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #060d8a;
+    font-weight: 700;
+}
+
+.navigation a:hover {
+    transition: all 1s;
+    text-shadow: -0 -2px 2px white,
+    0 -2px 2px white,
+    -0 2px 2px white,
+    0 2px 2px white,
+    -2px -0 2px white,
+    2px -0 2px white,
+    -2px 0 2px white,
+    2px 0 2px white,
+    -1px -2px 2px white,
+    1px -2px 2px white,
+    -1px 2px 2px white,
+    1px 2px 2px white,
+    -2px -1px 2px white,
+    2px -1px 2px white,
+    -2px 1px 2px white,
+    2px 1px 2px white,
+    -2px -2px 2px white,
+    2px -2px 2px white,
+    -2px 2px 2px white,
+    2px 2px 2px white,
+    -2px -2px 2px white,
+    2px -2px 2px white,
+    -2px 2px 2px white,
+    2px 2px 2px white;
+}
+
+.burger-checkbox {
+    z-index: 9999;
+    position: absolute;
+    visibility: hidden;
+}
+
+.burger {
+    z-index: 9999;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    border: none;
+    background: transparent;
+    width: 40px;
+    height: 26px;
+    margin: 30px auto;
+}
+
+.burger::before,
+.burger::after {
+    content: '';
+    left: 0;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background: #000;
+}
+
+.burger::before {
+    top: 0;
+    box-shadow: 0 11px 0 #000;
+    transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+}
+
+.burger::after {
+    bottom: 0;
+    transition: bottom .3s .15s, transform .3s;
+}
+
+.burger-checkbox:checked + .burger::before {
+    top: 11px;
+    transform: rotate(45deg);
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+    transition: box-shadow .15s, top .3s, transform .3s .15s;
+}
+
+.burger-checkbox:checked + .burger::after {
+    bottom: 11px;
+    transform: rotate(-45deg);
+    transition: bottom .3s, transform .3s .15s;
+}
+
+#navPanel {
+    display: block;
+}
+
+@media only screen and (min-width: 1010px) {
+    .burger {
+        display: none;
+    }
+
+    #navPanel a {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 1009px) {
+    .burger {
+        z-index: 9999;
+        cursor: pointer;
+        display: block;
+        position: relative;
+        border: none;
+        background: transparent;
+        width: 40px;
+        height: 26px;
+        margin: 30px 10px;
+        right: 0px;
+    }
+
+    .navigation a {
+        display: none;
+    }
+
+    #navPanel {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 250px;
+        background-color: #c7e1fe;
+        z-index: 999;
+        overflow-y: scroll;
+    }
+
+    #navPanel a {
+        display: block;
+        padding: 10px;
+        font-size: 18px;
+        transition: background-color 0.5s ease;
+    }
+    
+    #navPanel a:hover {
+    background-color: #a0c6fd;
+    }
+
+    .navigation img {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 451px) {
+    .navigation img {
+        max-width: 190px;
+        height: auto;
+        margin: 15px 10px 0 10px;
+        vertical-align: middle;
+        z-index: 1;
+    }
+}
+
+@media only screen and (max-width: 412px) {
+    .navigation img {
+        max-width: 150px;
+        height: auto;
+        margin: 15px 10px 0 10px;
+        vertical-align: middle;
+        z-index: 1;
+    }
+}
+
+@media only screen and (max-width: 374px) {
+    .navigation img {
+        max-width: 100px;
+        height: auto;
+        margin: 15px 10px 0 10px;
+        vertical-align: middle;
+        z-index: 1;
+    }
+}
+
+.main_body_text {
+    font-family: URW Chancery L, cursive;
+    border-radius: 80px;
+    min-height: 1000px;
+    background-image: url("../images/BackgroungContent.jpg");
+    padding: 20px;
+}
+
+
+
+
+

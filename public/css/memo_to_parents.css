@@ -1,0 +1,159 @@
+.introdaction{
+    margin: 40px 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 0 10px;
+}
+.introdaction_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.introdaction_img img{
+    max-width: 85%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* добавляем тени */
+}
+
+.introdaction_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+.introdaction_text p{
+    font-size: 22px;
+    color: #34426E;
+}
+@media(max-width:975px){
+    .introdaction{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+@media(max-width:500px){
+    .introdaction_text {
+        font-size: 18px;
+    }
+    .introdaction_text p{
+        font-size: 18px;
+        color: #34426E;
+    }
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: #eee;
+    color: #6d153c;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    opacity: 90%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.centered {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.line {
+    display: inline-block;
+    margin: 0 10px;
+    border-top: 2px solid #005caa;
+    width: 100%;
+}
+
+i.material-icons {
+    color: #eeee22;
+    font-size: 35px;
+}
+
+.memo_parents h1{
+    text-align: center;
+    color: #CF1A52;
+    font-family: URW Chancery L, cursive;
+    font-size: 40px;
+    font-weight: bolder;
+}
+.memo_parents h2{
+    text-align: center;
+    color: #CF1A52;
+    font-family: URW Chancery L, cursive;
+    font-size: 40px;
+    font-weight: bolder;
+}
+.memo_parents p{
+    color: #081E69;
+    font-family: URW Chancery L, cursive;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.spisok ul {
+    padding-left: 2rem;
+    list-style-type: none;
+}
+
+.spisok ul li {
+    margin: 20px;
+    font-size: 25px;
+    padding-left: 2rem;
+    background-image: url("../images/1020057.png");
+    background-position: 0 0;
+    background-size: 2rem 2rem;
+    background-repeat: no-repeat;
+    text-align: left;
+    color: #88166B;
+}
+@media (max-width: 768px) {
+    .memo_parents h1{
+        font-size: 30px;
+    }
+    .memo_parents h2{
+        font-size: 25px;
+    }
+    .memo_parents p{
+        font-size: 20px;
+    }
+    .spisok ul li {
+        margin: 10px;
+        font-size: 20px;
+        padding-left: 2rem;
+        background-size: 1.5rem 1.5rem;
+    }
+}

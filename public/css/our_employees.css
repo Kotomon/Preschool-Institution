@@ -1,0 +1,181 @@
+
+hr.new1 {
+    border: 3px solid #9c27b0;
+    margin-top: 50px;
+}
+
+.text h1 {
+    text-align: center;
+    color: #CF1A52;
+    font-family: URW Chancery L, cursive;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.text p {
+    text-align: center;
+    color: #081E69;
+    font-family: URW Chancery L, cursive;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.text b {
+    font-family: URW Chancery L, cursive;
+    font-size: 25px;
+    font-weight: bolder;
+    color: #6d153c;
+}
+
+.row {
+    place-items: center;
+}
+
+.card {
+    width:100%;
+    margin: 0 auto 40px auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 70%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    height: 120px;
+border-radius: 10%;
+    object-fit: cover;
+    display: block;
+    max-width: 100%;
+}
+
+.card-body {
+    padding: 20px 35px;
+    display: flex; /* Добавляем свойство */
+    justify-content: center; /* Добавляем выравнивание по центру */
+    flex-direction: column; /* Добавляем расположение дочерних элементов - в столбик */
+    text-align: center; /* Добавляем свойство */
+}
+
+.card-title {
+    color: #6d153c;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.card-text {
+    color: #081E69;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: bold;
+    display: inline-block;
+}
+.card-comment{
+    color: #081E69;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.card-body {
+    position: relative; /* родительский элемент для кнопок и текста комментария */
+}
+
+.btn {
+    background-color: #6d153c;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #450b20;
+}
+.btn-show-comment, .btn-hide-comment {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.btn-show-comment {
+    margin-bottom: 15px; /* отступ между кнопкой "Подробнее" и текстом комментария */
+}
+
+@media (min-width: 768px) {
+    .image-wrapper {
+        float: left;
+        margin-right: 20px;
+    }
+
+    .card-body {
+        overflow: hidden; /* чтобы текст не выходил за рамки блока */
+    }
+
+    .card-title {
+        margin-bottom: 0;
+    }
+
+    .card-text {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .image-wrapper {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .card img {
+        margin: 0 auto;
+    }
+}
+@media (min-width: 992px) {
+    .image-wrapper {
+        width: 40%; /* Увеличиваем ширину контейнера */
+    }
+}
+.centered {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.line {
+    display: inline-block;
+    margin: 0 10px;
+    border-top: 2px solid #005caa;
+    width: 100%;
+}
+
+i.material-icons {
+    color: #eeee22;
+    font-size: 35px;
+}
+@media (max-width: 768px) {
+    .text h1 {
+        font-size: 30px;
+    }
+    .text p {
+        font-size: 25px;
+    }
+    .text b {
+        font-size: 20px;
+    }
+}
+@media (max-width: 483px) {
+    .card {
+        max-width: 90%;
+    }
+}
